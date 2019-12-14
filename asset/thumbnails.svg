@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="thumbnails" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1267 154" style="enable-background:new 0 0 1267 154;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#000000;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st1{fill:#BFBFBF;stroke:#000000;stroke-linejoin:round;stroke-miterlimit:10;}
+	.thumbnail{
+			opacity:100%;
+	}
+	.thumbnail:hover{
+			opacity:60%;
+	}
+
+</style>
+<g class="thumbnail" id="hHalfFold">
+	<rect x="6" y="6" class="st0" width="111" height="143"/>
+	<rect x="6" y="6" class="st1" width="111" height="72"/>
+</g>
+<g class="thumbnail" id="vHalfFold">
+	<rect x="170" y="6" class="st0" width="111" height="143"/>
+	<rect x="170" y="6" class="st1" width="56" height="143"/>
+</g>
+<g class="thumbnail" id="triFold">
+	<rect x="661" y="6" class="st0" width="111" height="143"/>
+	<rect x="661" y="6" class="st1" width="111" height="48.45"/>
+	<rect x="661" y="100.55" class="st1" width="111" height="48.45"/>
+</g>
+<g class="thumbnail" id="quadFold">
+	<rect x="824" y="6" class="st0" width="111" height="143"/>
+	<rect x="824" y="6" class="st1" width="111" height="35.72"/>
+	<rect x="824" y="77.5" class="st1" width="111" height="35.72"/>
+</g>
+<g class="thumbnail" id="grid">
+	<rect x="987" y="6" class="st0" width="111" height="143"/>
+	<rect x="987" y="6" class="st1" width="55.5" height="71.5"/>
+	<rect x="1042.75" y="77.75" class="st1" width="55.25" height="71.25"/>
+</g>
+<g class="thumbnail" id="diagAHalfFold">
+	<rect x="334" y="6" class="st0" width="111" height="143"/>
+	<polygon class="st1" points="333.5,6.5 445,149.5 333.5,149.5 	"/>
+</g>
+<g class="thumbnail" id="diagAHalfFold_1_">
+	<rect x="498" y="6.5" class="st0" width="111" height="143"/>
+	<polygon class="st1" points="497.5,149 609,6 497.5,6 	"/>
+</g>
+<g class="thumbnail" id="windmill">
+	<rect x="1151" y="6" class="st0" width="111" height="143"/>
+	<polygon class="st1" points="1262,6.32 1206.5,77.5 1262,77.5 	"/>
+	<polygon class="st1" points="1151,148.68 1207,77.5 1151,77.5 	"/>
+	<polygon class="st1" points="1206.5,77.49 1151,6 1206.5,6 	"/>
+	<polygon class="st1" points="1206.5,78.01 1262,149 1206.5,149 	"/>
+</g>
+</svg>

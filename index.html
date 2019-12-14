@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>font-remix</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/ltp0xeq.css">
+  <!-- opentype.js -->
+  <script src="lib/opentype_fixed.js"></script>
+
+
+  <!-- paper.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.2/paper-core.js" integrity="sha256-4RbE3uL885YZdiAriyD8rRewYR78XTCqSgB35J9DlGQ=" crossorigin="anonymous"></script>
+
+  <!-- plumin.js -->
+  <script src="lib/plumin.js"></script>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <style>
+    #seudoCanvas {
+      width: 88vw;
+      height: 63vh;
+      background: white;
+      margin-left: 11%;
+    }
+
+    .testA {
+
+      font-size: 40px;
+      line-height: 39px;
+    }
+
+
+    #inputs {
+
+      display: inline-flex;
+      width: 100%;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+      margin-left: 13%;
+      margin-right: auto;
+      margin-top: 30px;
+
+    }
+
+    #dropdown1,
+    #dropdown2 {
+      width: 250px;
+    }
+
+    .flex-item {}
+
+    .btn {
+      height: 40px;
+      border-radius: 0px;
+      border: 1px solid black;
+    }
+
+    h1 {
+      padding-top: 20px;
+      padding-left: 13%;
+    }
+
+    #thumbnails {
+      width: 70%;
+      margin-left: 12%;
+      display: flex;
+      justify-content: space-between;
+
+
+    }
+
+    /* HIDE RADIO */
+    [type=radio] {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    /* IMAGE STYLES */
+    [type=radio]+img {
+      cursor: pointer;
+      width: 100px;
+
+    }
+
+    /* CHECKED STYLES */
+    [type=radio]:checked+img {
+
+      border: 1px solid black;
+
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <div id="glyphs"></div>
+  <h1>Solarc-vHalfFold.otf</h1>
+
+  <div class="container" id="inputs">
+
+
+    <p class="testA  flex-item" id="font1test">A</p>
+    <div class="dropdown flex-item">
+      <button class="btn btn-light dropdown-toggle font-selector" type="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Solide_Mirage-Etroit.ttf</button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item font1" href="#">Daubenton.ttf</a>
+        <a class="dropdown-item font1" href="#">Poppins-Medium.ttf</a>
+        <a class="dropdown-item font1" href="#">Barlow-Light.ttf</a>
+        <a class="dropdown-item font1" href="#">Barlow-LightItalic.ttf</a>
+        <a class="dropdown-item font1" href="#">Barlow-Regular.ttf</a>
+        <a class="dropdown-item font1" href="#">Barlow-Italic.ttf</a>
+        <!-- <a class="dropdown-item font1" href="#">Barlow-Medium.ttf</a>
+        <a class="dropdown-item font1" href="#">Barlow-MediumItalic.ttf</a> -->
+        <a class="dropdown-item font1" href="#">Barlow-SemiBold.ttf</a>
+        <a class="dropdown-item font1" href="#">Solide_Mirage-Etroit.ttf</a>
+        <a class="dropdown-item font1" href="#">Minipax-Regular.ttf</a>
+        <a class="dropdown-item font1" href="#">Minipax-Bold.ttf</a>
+        <a class="dropdown-item font1" href="#">ComingSoon-Regular.ttf</a>
+        <a class="dropdown-item font1" href="#">Archivo-Regular.ttf</a>
+        <a class="dropdown-item font1" href="#">Archivo-Italic.ttf</a>
+        <a class="dropdown-item font1" href="#">Archivo-Bold.ttf</a>
+        <a class="dropdown-item font1" href="#">Terminal-Grotesque.ttf</a>
+        <a class="dropdown-item font1" href="#">Codystar-Regular.ttf</a>
+        <a class="dropdown-item font1" href="#">RalewayDots-Regular.ttf</a>
+        <a class="dropdown-item font1" href="#">Raleway-SemiBold.ttf</a>
+        <a class="dropdown-item font1" href="#">Raleway-Black.ttf</a>
+
+      </div>
+    </div>
+    <p class="testA  flex-item" id="font2test">A</p>
+    <div class="dropdown flex-item">
+      <button class="btn btn-light dropdown-toggle font-selector" type="button" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Archivo-Regular.ttf</button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item font2" href="#">Daubenton.ttf</a>
+        <a class="dropdown-item font2" href="#">Poppins-Medium.ttf</a>
+        <a class="dropdown-item font2" href="#">Barlow-Light.ttf</a>
+        <a class="dropdown-item font2" href="#">Barlow-LightItalic.ttf</a>
+        <a class="dropdown-item font2" href="#">Barlow-Regular.ttf</a>
+        <a class="dropdown-item font2" href="#">Barlow-Italic.ttf</a>
+        <!-- <a class="dropdown-item font2" href="#">Barlow-Medium.ttf</a>
+        <a class="dropdown-item font2" href="#">Barlow-MediumItalic.ttf</a> -->
+        <a class="dropdown-item font2" href="#">Barlow-SemiBold.ttf</a>
+        <a class="dropdown-item font2" href="#">Solide_Mirage-Etroit.ttf</a>
+        <a class="dropdown-item font2" href="#">Minipax-Regular.ttf</a>
+        <a class="dropdown-item font2" href="#">Minipax-Bold.ttf</a>
+        <a class="dropdown-item font2" href="#">ComingSoon-Regular.ttf</a>
+        <a class="dropdown-item font2" href="#">Archivo-Regular.ttf</a>
+        <a class="dropdown-item font2" href="#">Archivo-Italic.ttf</a>
+        <a class="dropdown-item font2" href="#">Archivo-Bold.ttf</a>
+        <a class="dropdown-item font2" href="#">Terminal-Grotesque.ttf</a>
+        <a class="dropdown-item font2" href="#">Codystar-Regular.ttf</a>
+        <a class="dropdown-item font2" href="#">RalewayDots-Regular.ttf</a>
+        <a class="dropdown-item font2" href="#">Raleway-SemiBold.ttf</a>
+        <a class="dropdown-item font2" href="#">Raleway-Black.ttf</a>
+
+      </div>
+    </div>
+    <button class="btn btn-light  flex-item" onclick="switch()" >Variant</button>
+    <button class="btn btn-light  flex-item" onclick="randomFonts()">Random</button>
+    <button class="btn btn-light  flex-item" onclick="seudoCanvas.font.download()">Download</button>
+
+
+
+
+  </div>
+  <canvas id="seudoCanvas"></canvas>
+
+  <div id="glyphs"></div>
+  <div id="thumbnails">
+
+    <label>
+      <input class="thumbnail" type="radio" name="test" value="vHalfFold" checked>
+      <img src="asset/vHalfFold.svg">
+    </label>
+
+    <label>
+      <input class="thumbnail" type="radio" name="test" value="hHalfFold">
+      <img src="asset/hHalfFold.svg">
+    </label>
+
+
+    <label>
+      <input class="thumbnail" type="radio" name="test" value="triFold">
+      <img src="asset/triFold.svg">
+    </label>
+
+    <label>
+      <input class="thumbnail" type="radio" name="test" value="quadFold">
+      <img src="asset/quadFold.svg">
+    </label>
+
+
+
+    <label>
+      <input class="thumbnail" type="radio" name="test" value="checker">
+      <img src="asset/checker.svg">
+    </label>
+
+
+    <label>
+      <input class="thumbnail" type="radio" name="test" value="diagAHalfFold">
+      <img src="asset/diagAHalfFold.svg">
+    </label>
+
+    <label>
+      <input class="thumbnail" type="radio" name="test" value="diagBHalfFold">
+      <img src="asset/diagBHalfFold.svg">
+    </label>
+    <!-- <label>
+      <input class="thumbnail" type="radio" name="test" value="windmill">
+      <img src="asset/windmill.svg">
+    </label> -->
+
+
+  </div>
+  <script type="text/javascript" src="script.js"></script>
+  <script>
+    var type = "vHalfFold";
+
+
+    $(".font1").click(function() {
+      document.getElementById("dropdown1").innerHTML = this.innerHTML;
+      var fontStr = "fonts/" + this.innerHTML;
+      $("head").append("<style type=\"text/css\">" +
+        "@font-face {\n" +
+        "\tfont-family: \"font1\";\n" +
+        "\tsrc: local('☺'), url(" + fontStr + ");\n" +
+        "}\n" +
+        "\t#font1test {\n" +
+        "\tfont-family: font1 !important;\n" +
+        "}\n" +
+        "</style>");
+      draw("fonts/" + this.innerHTML, "fonts/" + $("#dropdown2").html(), type);
+      $("h1").html($("#dropdown1").html().substring(0, 3) + $("#dropdown2").html().substring(0, 3).toLowerCase() + "-" + type + ".otf");
+
+
+
+    });
+
+    $(".font2").click(function() {
+      var fontStr = "fonts/" + this.innerHTML;
+      $("head").append("<style type=\"text/css\">" +
+        "@font-face {\n" +
+        "\tfont-family: \"font2\";\n" +
+        "\tsrc: local('☺'), url(" + fontStr + ");\n" +
+        "}\n" +
+        "\t#font2test {\n" +
+        "\tfont-family: font2 !important;\n" +
+        "}\n" +
+        "</style>");
+      document.getElementById("dropdown2").innerHTML = this.innerHTML;
+      draw("fonts/" + $("#dropdown1").html(), "fonts/" + this.innerHTML, type);
+      $("h1").html($("#dropdown1").html().substring(0, 3) + $("#dropdown2").html().substring(0, 3).toLowerCase() + "-" + type + ".otf");
+
+    });
+
+    $(".thumbnail").click(function() {
+      type = $("input[type=radio][name=test]:checked").val();
+      draw("fonts/" + $("#dropdown1").html(), "fonts/" + $("#dropdown2").html(), type);
+
+      $("h1").html($("#dropdown1").html().substring(0, 3) + $("#dropdown2").html().substring(0, 3).toLowerCase() + "-" + type + ".otf");
+
+
+    });
+  </script>
+
+</body>
+
+</html>
