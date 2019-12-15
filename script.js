@@ -4,7 +4,7 @@ window.onload = function() {
   $("head").append("<style type=\"text/css\">" +
     "@font-face {\n" +
     "\tfont-family: \"font1\";\n" +
-    "\tsrc: local('☺'), url(\"fonts/Daubenton.ttf\");\n" +
+    "\tsrc: local('☺'), url(\"fonts/Solide_Mirage-Etroit.ttf\");\n" +
     "}\n" +
     "\t#font1test {\n" +
     "\tfont-family: font1 !important;\n" +
@@ -14,7 +14,7 @@ window.onload = function() {
   $("head").append("<style type=\"text/css\">" +
     "@font-face {\n" +
     "\tfont-family: \"font2\";\n" +
-    "\tsrc: local('☺'), url(\"fonts/Poppins-Medium.ttf\");\n" +
+    "\tsrc: local('☺'), url(\"fonts/Archivo-Regular.ttf\");\n" +
     "}\n" +
     "\t#font2test {\n" +
     "\tfont-family: font2 !important;\n" +
